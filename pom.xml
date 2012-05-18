@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.sarxos</groupId>
+	<artifactId>sikuli-ocr</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>Sikuli OCR</name>
+	<description>Sikuli-based OCR engine. It extracts texts from what you see on the screen.</description>
+	<url>http://sarxos.github.com/sikuli-ocr</url>
+
+	<organization>
+		<name>Bartosz Firyn (SarXos)</name>
+		<url>https://github.com/sarxos</url>
+	</organization>
+
+	<scm>
+		<url>https://github.com/sarxos/sikuli-ocr</url>
+		<connection>git@github.com:sarxos/sikuli-ocr.git</connection>
+		<developerConnection>SarXos</developerConnection>
+	</scm>
+
+	<issueManagement>
+		<url>https://github.com/sarxos/sikuli-ocr/issues</url>
+		<system>GitHub</system>
+	</issueManagement>
+
+	<ciManagement>
+		<system>Travis</system>
+		<url>http://travis-ci.org/</url>
+	</ciManagement>
+
+	<repositories>
+		<repository>
+			<id>sarxos-repo</id>
+			<url>http://www.sarxos.pl/repo/maven2</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>sarxos-ftp-repo</id>
+			<url>ftp://ftp.sarxos.pl/maven2</url>
+		</repository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sarxos</groupId>
+			<artifactId>win-registry</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sikuli</groupId>
+			<artifactId>sikuli-script</artifactId>
+			<version>0.10.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.3</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>1.0-beta-7</version>
+			</extension>
+		</extensions>
+	</build>
+
+
+</project>

@@ -1,0 +1,12 @@
+<glyphs name="numbers">
+	<glyph image="0.png" char="0" />
+	<glyph image="1.png" char="1" />
+	<glyph image="2.png" char="2" />
+	<glyph image="3.png" char="3" />
+	<glyph image="4.png" char="4" />
+	<glyph image="5.png" char="5" />
+	<glyph image="6.png" char="6" />
+	<glyph image="7.png" char="7" />
+	<glyph image="8.png" char="8" />
+	<glyph image="9.png" char="9" />
+</glyphs>
