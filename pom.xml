@@ -63,7 +63,38 @@
 		</dependency>
 	</dependencies>
 
+
+
 	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<version>2.4</version>
+										<goals>
+											<goal>copy</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -74,7 +105,34 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>process-test-classes</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+	                			<artifactItem>
+									<groupId>org.sikuli</groupId>
+									<artifactId>sikuli-script</artifactId>
+									<version>0.10.2</version>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}</outputDirectory>
+									<destFileName>sikuli-script.jar</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>				
+			</plugin>
 		</plugins>
+		
 		<extensions>
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
