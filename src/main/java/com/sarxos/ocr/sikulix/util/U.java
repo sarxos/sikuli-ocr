@@ -6,6 +6,7 @@ import org.sikuli.script.Pattern;
 
 
 /**
+ * Just another utility class.
  * 
  * @author Bartosz Firyn (SarXos)
  */

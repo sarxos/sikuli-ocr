@@ -1,4 +1,4 @@
-Sikuli-based OCR engine
+# Sikuli-based OCR engine
 
 [![Build Status](https://secure.travis-ci.org/sarxos/sikuli-ocr.png?branch=master)](http://travis-ci.org/sarxos/sikuli-ocr)
 
@@ -16,6 +16,13 @@ to write my own. It is not very powerful, but it is sufficient for my needs.
 1. Does not work with Java 7 :(
 2. Recognize only one-line texts
 3. Only predefined fonts can be recognized
+
+## Possible Usage
+
+1. All kind of game bots where you have to read texts / numbers directly from the screen
+2. Game assistants - health monitors, potion healers, etc
+3. Tests automation
+4. And many many more
 
 ## Prerequisites
 
@@ -68,4 +75,46 @@ represent it as char `2`.
 	<glyph image="9.png" char="9" />
 </glyphs>
 ```
+
+You can find example glyph libraries in the source code. 
+
+By default glyphs libraries are stored in ```data/glyphs``` directory, but you can change this default location
+by setting your own path, e.g.:
+
+```java
+OCR.setStoragePath("src/main/resources/glyphs");
+``` 
+
+### Write Your Code
+
+In all cases you have to know exact coordinates from where you would like to read the text. Those coordinates
+are nothing more then screen units - left top corner is (0, 0) and right bottom corner is (1024, 768) assuming
+that your screen resolution is 1024 x 768 px.
+
+Assume you would like to read text from region starting in (200, 300), 50 px high and 100 px wide - something like this:
+
+![Test](https://github.com/sarxos/sikuli-ocr/raw/master/src/main/resources/images/test.png)
+
+```java
+OCR ocr = OCR.getSpec("numbers");
+String text = ocr.read(new Rectangle(200, 300, 100, 50));
+System.out.println("Text is: " + text);
+```
+
+On the console output you will get:
+
+```
+Text is: TEST 1234
+```
+
+## License
+
+Copyright (C) 2012 Bartosz Firyn
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 

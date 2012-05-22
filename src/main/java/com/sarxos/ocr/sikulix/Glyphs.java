@@ -79,7 +79,7 @@ public class Glyphs {
 			if (path.isDirectory()) {
 				return loadFromDir(path);
 			} else {
-				return loadFromGLP(path);
+				return loadFromZIP(path);
 			}
 		} else {
 			throw new RuntimeException("Path " + name + " does not exist");
@@ -112,9 +112,8 @@ public class Glyphs {
 		return glyphs;
 	}
 
-	private static List<Glyph> loadFromGLP(File p) {
-		// TODO read glyps from glp file
-		return null;
+	private static List<Glyph> loadFromZIP(File path) {
+		throw new RuntimeException("Not yet implemented");
 	}
 
 	public static void main(String[] args) {

@@ -76,10 +76,20 @@ public class OCR {
 	}
 
 	/**
-	 * Read text from region basing on the glyphs data.
+	 * Read text from screen rectangle basing on the glyphs data.
 	 * 
-	 * @param region - region to read text for
-	 * @return Recognized text
+	 * @param rectangle rectangle object with the coordinates
+	 * @return Recognized text as String
+	 */
+	public String read(Rectangle rectangle) {
+		return this.read(Region.create(rectangle));
+	}
+
+	/**
+	 * Read text from screen region basing on the glyphs data.
+	 * 
+	 * @param region region to read text from
+	 * @return Recognized text as String
 	 */
 	public String read(Region region) {
 
@@ -158,9 +168,8 @@ public class OCR {
 	 */
 	public static void main(String[] args) throws InterruptedException, FindFailed {
 		OCR.setStoragePath("src/main/resources/glyphs");
-		Region region = Region.create(new Rectangle(600, 600, 100, 50));
-		region.highlight(5.0f);
+
 		OCR ocr = OCR.getSpec("numbers");
-		System.out.println(ocr.read(region));
+		System.out.println(ocr.read(new Rectangle(100, 300, 100, 50)));
 	}
 }
