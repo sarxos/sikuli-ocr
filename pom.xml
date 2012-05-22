@@ -122,7 +122,7 @@
 									<groupId>org.sikuli</groupId>
 									<artifactId>sikuli-script</artifactId>
 									<version>0.10.2</version>
-									<overWrite>true</overWrite>
+									<overWrite>false</overWrite>
 									<outputDirectory>${project.build.directory}</outputDirectory>
 									<destFileName>sikuli-script.jar</destFileName>
 								</artifactItem>
