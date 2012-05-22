@@ -1,0 +1,37 @@
+<glyphs name="numbers">
+	<glyph image="0.png" char="0" similarity="99" />
+	<glyph image="1.png" char="1" similarity="99" />
+	<glyph image="2.png" char="2" similarity="99" />
+	<glyph image="3.png" char="3" similarity="99" />
+	<glyph image="4.png" char="4" similarity="99" />
+	<glyph image="5.png" char="5" similarity="99" />
+	<glyph image="6.png" char="6" similarity="99" />
+	<glyph image="7.png" char="7" similarity="99" />
+	<glyph image="8.png" char="8" similarity="99" />
+	<glyph image="9.png" char="9" similarity="99" />
+	<glyph image="A.png" char="A" similarity="99" />
+	<glyph image="B.png" char="B" similarity="99" />
+	<glyph image="C.png" char="C" similarity="99" />
+	<glyph image="D.png" char="D" similarity="99" />
+	<glyph image="E.png" char="E" similarity="99" />
+	<glyph image="F.png" char="F" similarity="99" />
+	<glyph image="G.png" char="G" similarity="99" />
+	<glyph image="H.png" char="H" similarity="99" />
+	<glyph image="I.png" char="I" similarity="99" />
+	<glyph image="J.png" char="J" similarity="99" />
+	<glyph image="K.png" char="K" similarity="99" />
+	<glyph image="L.png" char="L" similarity="99" />
+	<glyph image="M.png" char="M" similarity="99" />
+	<glyph image="N.png" char="N" similarity="99" />
+	<glyph image="O.png" char="O" similarity="99" />
+	<glyph image="P.png" char="P" similarity="99" />
+	<glyph image="R.png" char="R" similarity="99" />
+	<glyph image="S.png" char="S" similarity="99" />
+	<glyph image="T.png" char="T" similarity="99" />
+	<glyph image="U.png" char="U" similarity="99" />
+	<glyph image="V.png" char="V" similarity="99" />
+	<glyph image="W.png" char="W" similarity="99" />
+	<glyph image="X.png" char="X" similarity="99" />
+	<glyph image="Y.png" char="Y" similarity="99" />
+	<glyph image="Z.png" char="Z" similarity="99" />
+</glyphs>
