@@ -20,7 +20,7 @@ public class OCRTest {
 
 	@Test
 	public void test_read1() {
-		ImageFrame f = new ImageFrame("src\\main\\resources\\images\\test.png");
+		ImageFrame f = new ImageFrame("src/main/resources/images/test.png");
 		String text = ocr.read(f.getBounds());
 		System.out.println(text);
 		Assert.assertEquals("TEST1234", text);
@@ -29,7 +29,7 @@ public class OCRTest {
 
 	@Test
 	public void test_read2() {
-		ImageFrame f = new ImageFrame("src\\main\\resources\\images\\test2.png");
+		ImageFrame f = new ImageFrame("src/main/resources/images/test2.png");
 		String text = ocr.read(f.getBounds());
 		System.out.println(text);
 		Assert.assertEquals("ABCDEFGHIJKL", text);
@@ -38,7 +38,7 @@ public class OCRTest {
 
 	@Test
 	public void test_read3() {
-		ImageFrame f = new ImageFrame("src\\main\\resources\\images\\test3.png");
+		ImageFrame f = new ImageFrame("src/main/resources/images/test3.png");
 		String text = ocr.read(f.getBounds());
 		System.out.println(text);
 		Assert.assertEquals("0123456789", text);
@@ -47,7 +47,7 @@ public class OCRTest {
 
 	@Test
 	public void test_read4() {
-		ImageFrame f = new ImageFrame("src\\main\\resources\\images\\test4.png");
+		ImageFrame f = new ImageFrame("src/main/resources/images/test4.png");
 		String text = ocr.read(f.getBounds());
 		System.out.println(text);
 		Assert.assertEquals("MNOPRSTUVWXYZ", text);
@@ -56,7 +56,7 @@ public class OCRTest {
 
 	@Test
 	public void test_read5() {
-		ImageFrame f = new ImageFrame("src\\main\\resources\\images\\test5.png");
+		ImageFrame f = new ImageFrame("src/main/resources/images/test5.png");
 		String text = ocr.read(f.getBounds());
 		System.out.println(text);
 		Assert.assertEquals("ABCD1234", text);

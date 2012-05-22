@@ -37,7 +37,7 @@ public class ImageFrame extends JFrame implements KeyListener {
 
 		addKeyListener(this);
 		setContentPane(imageLabel);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setUndecorated(true);
 		setLocation(0, 0);
 		pack();
