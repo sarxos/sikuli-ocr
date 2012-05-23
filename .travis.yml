@@ -1,7 +1,8 @@
 language: java
 before_script:
-- "export DISPLAY=:99.0"
-- "sh -e /etc/init.d/xvfb start"
-- "export MAVEN_OPTS=-Dsikuli-script=target/sikuli-script.jar"
+  - sudo apt-get install libcv2.1
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - "export MAVEN_OPTS=-Dsikuli-script=target/sikuli-script.jar"
 script: "mvn test -X"
 
