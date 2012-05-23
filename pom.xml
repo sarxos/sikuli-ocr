@@ -50,6 +50,7 @@
 			<groupId>org.sikuli</groupId>
 			<artifactId>sikuli-script</artifactId>
 			<version>0.10.2</version>
+			<classifier>linux</classifier>
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -122,6 +123,7 @@
 									<groupId>org.sikuli</groupId>
 									<artifactId>sikuli-script</artifactId>
 									<version>0.10.2</version>
+									<classifier>linux</classifier>
 									<overWrite>false</overWrite>
 									<outputDirectory>${project.build.directory}</outputDirectory>
 									<destFileName>sikuli-script.jar</destFileName>
