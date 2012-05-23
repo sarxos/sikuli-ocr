@@ -45,12 +45,37 @@
 		</repository>
 	</distributionManagement>
 
+	<profiles>
+    	<profile>
+    		<id>linux</id>
+    		<activation>
+    			<os>
+    				<family>Linux</family>
+    			</os>
+    		</activation>
+    		<properties>
+    			<sikulix.classifier>linux</sikulix.classifier>
+        	</properties>
+    	</profile>
+    	<profile>
+    		<id>windows</id>
+    		<activation>
+    			<os>
+    				<family>Windows</family>
+    			</os>
+    		</activation>
+    		<properties>
+    			<sikulix.classifier>win32</sikulix.classifier>
+        	</properties>
+    	</profile>
+    </profiles>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.sikuli</groupId>
 			<artifactId>sikuli-script</artifactId>
 			<version>0.10.2</version>
-			<classifier>linux</classifier>
+			<classifier>${sikulix.classifier}</classifier>
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -63,8 +88,6 @@
 			<version>4.10</version>
 		</dependency>
 	</dependencies>
-
-
 
 	<build>
 		<pluginManagement>
@@ -123,7 +146,7 @@
 									<groupId>org.sikuli</groupId>
 									<artifactId>sikuli-script</artifactId>
 									<version>0.10.2</version>
-									<classifier>linux</classifier>
+									<classifier>${sikulix.classifier}</classifier>
 									<overWrite>false</overWrite>
 									<outputDirectory>${project.build.directory}</outputDirectory>
 									<destFileName>sikuli-script.jar</destFileName>

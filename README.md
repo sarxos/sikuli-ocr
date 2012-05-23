@@ -16,6 +16,7 @@ to write my own. It is not very powerful, but it is sufficient for my needs.
 1. Does not work with Java 7 :(
 2. Recognize only one-line texts
 3. Only predefined fonts can be recognized
+4. Does not recognize whitespaces
 
 ## Possible Usage
 
@@ -104,7 +105,7 @@ System.out.println("Text is: " + text);
 On the console output you will get:
 
 ```
-Text is: TEST 1234
+Text is: TEST1234
 ```
 
 ## License
