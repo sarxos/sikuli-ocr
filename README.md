@@ -97,7 +97,7 @@ Assume you would like to read text from region starting in (200, 300), 50 px hig
 ![Test](https://github.com/sarxos/sikuli-ocr/raw/master/src/main/resources/images/test.png)
 
 ```java
-OCR ocr = OCR.getSpec("numbers");
+OCR ocr = OCR.getSpec("test"); // can be set to "numbers" if you need only digits to be read
 String text = ocr.read(new Rectangle(200, 300, 100, 50));
 System.out.println("Text is: " + text);
 ```
