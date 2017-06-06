@@ -6,23 +6,23 @@
 
 This toll allows you to capture text from your screen. If you tried to read texts with Sikuli itself, 
 you probably found that it uses [tesseract-ocr](http://code.google.com/p/tesseract-ocr/) to recognize
-text from images available in screen buffer. Well, this recognition is really poor. I my case I found
-that only 10% texts has been recognized properly and I tried to recognize numbers only! After this
+text from images available in screen buffer. Well, this recognition is really poor. In my case I found
+that only 10% of texts are recognized properly. And I tried to recognize numbers only! After this
 adventure I found myself in very bad position since I didn't find any Java-based OCR library. I decided
 to write my own. It is not very powerful, but it is sufficient for my needs.
 
 ## Limitations
 
 1. Does not work with Java 7 :(
-2. Recognize only one-line texts
+2. Recognizes only one-line texts
 3. Only predefined fonts can be recognized
 4. Does not recognize whitespaces
 
 ## Possible Usage
 
-1. All kind of game bots where you have to read texts / numbers directly from the screen
+1. All kind of game bots where you have to read text / numbers directly from the screen
 2. Game assistants - health monitors, potion healers, etc
-3. Tests automation
+3. Test automation
 4. And many many more
 
 ## Prerequisites
@@ -32,16 +32,16 @@ to write my own. It is not very powerful, but it is sufficient for my needs.
 
 ## How To Use It
 
-I will try do describe step-by-step how to make this tool running for you. First at all you have to know
-that this tool will not recognize all texts - it is strictly connected with font size, its weight, and
-family. So for larger / different fonts you have to create separate glyphs library.
+I will try do describe step-by-step how to make this tool running for you. First of all you have to know
+that this tool will not recognize all alphabetic character types - it is strictly connected with font size, its weight, and
+family. So for larger / different fonts you have to create separate glyph libraries.
 
-### Create Glyphs Library
+### Create Glyph Libraries
 
-Glyphs library is nothing more then XML file together with images representing letters / numbers 
+Glyph libraries are nothing more than XML file together with images representing letters / numbers 
 all included in one directory.
 
-Sample glyphs library - it will cover only numbers:
+Sample glyph library - it will cover only numbers:
 
 ```
 numbers
@@ -59,8 +59,8 @@ numbers
 ```
 
 File `glyphs.xml` contains mapping between images and corresponding chars. For example file `2.png` is
-connected with corresponding `2` char. That means Sikuli OCR should find pattern from `2.png` file and 
-represent it as char `2`.
+connected with corresponding `2` char. That means Sikuli OCR should find the pixel pattern from `2.png` file and 
+represent it as a char `2`.
 
 ```
 <glyphs name="numbers">
@@ -79,7 +79,7 @@ represent it as char `2`.
 
 You can find example glyph libraries in the source code. 
 
-By default glyphs libraries are stored in ```data/glyphs``` directory, but you can change this default location
+By default glyph libraries are stored in ```data/glyphs``` directory, but you can change this default location
 by setting your own path, e.g.:
 
 ```java
@@ -89,7 +89,7 @@ OCR.setStoragePath("src/main/resources/glyphs");
 ### Write Your Code
 
 In all cases you have to know exact coordinates from where you would like to read the text. Those coordinates
-are nothing more then screen units - left top corner is (0, 0) and right bottom corner is (1024, 768) assuming
+are nothing more than screen units - left top corner is (0, 0) and right bottom corner is (1024, 768) assuming
 that your screen resolution is 1024 x 768 px.
 
 Assume you would like to read text from region starting in (200, 300), 50 px high and 100 px wide - something like this:
